@@ -1,4 +1,4 @@
-# com_smtp2go
+# ext_smtp2go
 
 Send emails via smtp2go's smtp relay service.
 
