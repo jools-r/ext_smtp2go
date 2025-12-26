@@ -1,0 +1,9 @@
+{
+    "version": "0.10",
+    "type": "0",
+    "order": "5",
+    "author": "Jools R",
+    "author_uri": "http:\/\/github.com\/jools-r",
+    "description": "com_connect module to send email via smtp2go API",
+    "flags": 0
+}

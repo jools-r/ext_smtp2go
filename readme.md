@@ -1,0 +1,37 @@
+# com_smtp2go
+
+Send emails via smtp2go's smtp relay service.
+
+## Why might I need this?
+
+Some web hosts and many VPS cloud servers come without email hosting. In such cases you can use Textpattern's advanced mail handling to specify an smtp connection to an email you host with an external mail provider, or you can use an smtp relaying service such as smtp2go, which offers a free low-usage tier.
+
+Note: This plugin works in conjunction with [com_connect](https://github.com/textpattern/com_connect) and requires com_connect to be installed and activated.
+
+## Preparation
+
+You will need an account with smtp2go.com and to set up the following settings:
+
+- In smtp2go’s account area, choose Sending › API Keys and create a key.
+- You will need to set up a verified sender. You can verify either:
+  - Emails from an entire domain, which are verified by setting CNAME records in your DNS records.* For this you need access to the domain’s DNS settings ([instructions](https://support.smtp2go.com/hc/en-gb/articles/115004408567-Verified-Senders)).
+  - Single sender emails, which are verified by a confirmation link.
+
+*Tip: Some registrars require an additional `.` at the end of the target (content) part of the CNAME record.
+
+
+## Usage
+
+Edit the plugin code and fill in:
+
+1. The value of your smtp2go api_token where indicated.
+2. The email you wish to send from.
+
+Save the plugin.
+
+Write your `<txp:com_connect>` form as normal. Emails will be diverted to smtp2go’s API for sending. The plugin supports both plain text and HTML content for the email's body field.
+
+
+### Credits
+
+This plugin borrows heavily from zcr_postmark by zem and Stef Dawson.
